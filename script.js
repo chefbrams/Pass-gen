@@ -14,12 +14,12 @@ var randArr;
 
 
 function generatePassword() {
-  var passLength = prompt("How many characters would you like your password between 8 and 128?");
+  var passLength = parseInt(prompt("How many characters would you like your password between 8 and 128?"));
   console.log(passLength);
   // loops until conditions are met
   while (passLength < 8 || passLength > 128) {
     alert("The password is too short/long; please try again!");
-    var passLength = prompt("How many characters would you like your password between 8 and 128?");
+    var passLength = parseInt(prompt("How many characters would you like your password between 8 and 128?"));
   }
 
   var passNumber = confirm("Would you like numbers in your password?");
@@ -105,9 +105,9 @@ function generatePassword() {
     randArr = arrLower.concat(arrUpper, arrChar, arrNumber);
     console.log(randArr);
   }
-
+  var randPass = "";
   for (var i = 0; i < passLength; i++) {
-    var randPass = randArr[Math.floor(Math.random() * randArr.length)];
+    randPass += randArr[Math.floor(Math.random() * randArr.length)];
     // inside loop concat the random char to randPass
 
   }
