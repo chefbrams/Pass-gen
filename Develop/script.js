@@ -14,17 +14,17 @@ var randArr;
 
 
 function generatePassword() {
-  var passLength = parseInt(prompt("How many characters would you like your password between 8 and 128?"));
+  var passLength = parseInt(prompt("Please choose between 8 and 128 characters for your password"));
   console.log(passLength);
   // loops until conditions are met
   while (passLength < 8 || passLength > 128) {
-    alert("The password is too short/long; please try again!");
-    var passLength = parseInt(prompt("How many characters would you like your password between 8 and 128?"));
+    alert("The password is too short/long; please try again!")
+    var passLength = parseInt(prompt("Please choose between 8 and 128 characters for your password"));
   }
 
   var passNumber = confirm("Would you like numbers in your password?");
   console.log(passNumber)
-  var passUpper = confirm("Would you like Upper Case characters in your password?");
+  var passUpper = confirm("Would you like upper case characters in your pass word?");
   var passLower = confirm("Would you like lower case characters in your password?");
   var passSpecial = confirm("Would you like special characters in your password?");
 
@@ -33,11 +33,11 @@ function generatePassword() {
     alert("One option must be chosen.  Please pick again!")
     var passNumber = confirm("Would you like numbers in your password?");
     console.log(passNumber)
-    var passUpper = confirm("Would you like Upper Case characters in your password?");
+    var passUpper = confirm("Would you like upper case characters in your password?");
     var passLower = confirm("Would you like lower case characters in your password?");
     var passSpecial = confirm("Would you like special characters in your password?");
   }
-
+  // password arrays
   var arrNumber = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
   var arrUpper = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
   var arrLower = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
